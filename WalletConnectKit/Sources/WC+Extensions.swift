@@ -7,7 +7,7 @@
 
 import WalletConnectSwift
 
-extension WCURL {
+public extension WCURL {
 
     var partiallyPercentEncodedStr: String {
         let params = "bridge=\(bridgeURL.absoluteString)&key=\(key)"

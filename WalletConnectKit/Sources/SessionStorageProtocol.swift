@@ -8,7 +8,7 @@
 import WalletConnectSwift
 
 /// Storage protocol. Service communicates with the storage in different ways using this protocol.
-protocol SessionStorageProtocol {
+public protocol SessionStorageProtocol {
     
     /// Get list of entire stored sessions
     func getAllSessions() throws -> [Session]

@@ -6,7 +6,7 @@
 //
 
 /// dApp technical data provider
-protocol DAppInfoProviderProtocol {
+public protocol DAppInfoProviderProtocol {
     
     var peerId: String { get }
     

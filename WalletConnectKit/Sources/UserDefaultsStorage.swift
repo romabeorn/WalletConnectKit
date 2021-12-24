@@ -5,9 +5,10 @@
 //  Created by Overcout on 24.12.2021.
 //
 
+import Foundation
 import WalletConnectSwift
 
-enum UserDefaultsStorageError: Error {
+public enum UserDefaultsStorageError: Error {
 
     case getAll
     case getCurrent
@@ -16,23 +17,25 @@ enum UserDefaultsStorageError: Error {
     case remove
 }
 
-final class UserDefaultsStorage {
+public final class UserDefaultsStorage {
     
     // MARK: - Private Properties
     
     @Defaults<Data>(key: .sessionCurrent) private var sessionCurrent
     @Defaults<[Data]>(key: .sessions) private var sessions
+
+    public init() {}
 }
 
 // MARK: - SessionStorageProtocol
 
 extension UserDefaultsStorage: SessionStorageProtocol {
 
-    func getAllSessions() throws -> [Session] {
+    public func getAllSessions() throws -> [Session] {
         sessions?.compactMap { try? JSONDecoder().decode(Session.self, from: $0) } ?? []
     }
     
-    func getCurrentSession() throws -> Session? {
+    public func getCurrentSession() throws -> Session? {
         guard let data = sessionCurrent else { return nil }
         do {
             return try JSONDecoder().decode(Session.self, from: data)
@@ -41,7 +44,7 @@ extension UserDefaultsStorage: SessionStorageProtocol {
         }
     }
     
-    func setCurrent(session: Session?) throws {
+    public func setCurrent(session: Session?) throws {
         do {
             if let session = session {
                 sessionCurrent = try JSONEncoder().encode(session)
@@ -53,7 +56,7 @@ extension UserDefaultsStorage: SessionStorageProtocol {
         }
     }
     
-    func updateCurrent(session: Session) throws {
+    public func updateCurrent(session: Session) throws {
         do {
             if let current = try getCurrentSession() {
                 try remove(session: current)
@@ -65,7 +68,7 @@ extension UserDefaultsStorage: SessionStorageProtocol {
         }
     }
     
-    func append(session: Session) throws {
+    public func append(session: Session) throws {
         do {
             var sessions = sessions ?? []
             let data = try JSONEncoder().encode(session)
@@ -77,7 +80,7 @@ extension UserDefaultsStorage: SessionStorageProtocol {
         }
     }
     
-    func remove(session: Session) throws {
+    public func remove(session: Session) throws {
         do {
             var sessions = sessions ?? []
             let data = try JSONEncoder().encode(session)
@@ -88,7 +91,7 @@ extension UserDefaultsStorage: SessionStorageProtocol {
         }
     }
     
-    func removeAllSessions() throws {
+    public func removeAllSessions() throws {
         sessions = []
         sessionCurrent = nil
     }

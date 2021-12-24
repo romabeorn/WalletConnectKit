@@ -5,34 +5,35 @@
 //  Created by Overcout on 24.12.2021.
 //
 
+import Foundation
 import WalletConnectSwift
 
 /// Error's enumeration
 ///
 /// - noCurrentSession: Error getting current session
-enum WalletConnectServiceError: Error {
+public enum WalletConnectServiceError: Error {
 
     case noCurrentSession
 }
 
 /// Default Wallet Connect Service
-final class WalletConnectServiceDefault {
+public final class WalletConnectServiceDefault {
     
     // MARK: - WalletConnectServiceProtocol Properties
     
-    weak var serviceDelegate: WalletConnectServiceDelegate?
+    public weak var serviceDelegate: WalletConnectServiceDelegate?
     
-    weak var delegate: ClientDelegate?
+    public weak var delegate: ClientDelegate?
     
-    var client: Client?
+    public var client: Client?
 
-    let bridgeProvider: BridgeProviderProtocol
+    public let bridgeProvider: BridgeProviderProtocol
 
-    let dAppInfoProvider: DAppInfoProviderProtocol
+    public let dAppInfoProvider: DAppInfoProviderProtocol
 
-    let clientMetaProvider: ClientMetaProviderProtocol
+    public let clientMetaProvider: ClientMetaProviderProtocol
     
-    let sessionStorage: SessionStorageProtocol
+    public let sessionStorage: SessionStorageProtocol
 
     // MARK: - Init
     
@@ -42,7 +43,7 @@ final class WalletConnectServiceDefault {
     ///   - bridgeProvider: Wallet Connect bridge data provider
     ///   - dAppInfoProvider: dApp technical data provider
     ///   - clientMetaProvider: dApp business data provider
-    init(sessionStorage: SessionStorageProtocol,
+    public init(sessionStorage: SessionStorageProtocol,
          bridgeProvider: BridgeProviderProtocol,
          dAppInfoProvider: DAppInfoProviderProtocol,
          clientMetaProvider: ClientMetaProviderProtocol) {
@@ -57,7 +58,7 @@ final class WalletConnectServiceDefault {
 
 extension WalletConnectServiceDefault: WalletConnectServiceProtocol {
 
-    func connect() throws {
+    public func connect() throws {
         let peerMeta = Session.ClientMeta(
             name: clientMetaProvider.name,
             description: clientMetaProvider.description,
@@ -80,7 +81,7 @@ extension WalletConnectServiceDefault: WalletConnectServiceProtocol {
         try client?.connect(to: url)
     }
 
-    func reconnect() throws {
+    public func reconnect() throws {
         guard let session = try sessionStorage.getCurrentSession() else {
             throw WalletConnectServiceError.noCurrentSession
         }
@@ -89,7 +90,7 @@ extension WalletConnectServiceDefault: WalletConnectServiceProtocol {
         try client?.reconnect(to: session)
     }
     
-    func disconnect() throws {
+    public func disconnect() throws {
         guard let session = try sessionStorage.getCurrentSession() else {
             throw WalletConnectServiceError.noCurrentSession
         }
@@ -103,27 +104,27 @@ extension WalletConnectServiceDefault: WalletConnectServiceProtocol {
 
 extension WalletConnectServiceDefault: ClientDelegate {
 
-    func client(_ client: Client, didFailToConnect url: WCURL) {
+    public func client(_ client: Client, didFailToConnect url: WCURL) {
         DispatchQueue.main { self.delegate?.client(client, didFailToConnect: url) }
     }
     
-    func client(_ client: Client, didConnect url: WCURL) {
+    public func client(_ client: Client, didConnect url: WCURL) {
         DispatchQueue.main { self.delegate?.client(client, didConnect: url) }
     }
     
-    func client(_ client: Client, didConnect session: Session) {
+    public func client(_ client: Client, didConnect session: Session) {
         try? sessionStorage.setCurrent(session: session)
         try? sessionStorage.append(session: session)
         DispatchQueue.main { self.delegate?.client(client, didConnect: session) }
     }
     
-    func client(_ client: Client, didDisconnect session: Session) {
+    public func client(_ client: Client, didDisconnect session: Session) {
         try? sessionStorage.setCurrent(session: session)
         try? sessionStorage.remove(session: session)
         DispatchQueue.main { self.delegate?.client(client, didDisconnect: session) }
     }
     
-    func client(_ client: Client, didUpdate session: Session) {
+    public func client(_ client: Client, didUpdate session: Session) {
         try? sessionStorage.setCurrent(session: session)
         try? sessionStorage.updateCurrent(session: session)
         DispatchQueue.main { self.delegate?.client(client, didUpdate: session) }

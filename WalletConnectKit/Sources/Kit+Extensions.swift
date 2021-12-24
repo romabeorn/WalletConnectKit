@@ -5,6 +5,8 @@
 //  Created by Overcout on 24.12.2021.
 //
 
+import Foundation
+
 extension DispatchQueue {
 
     static func main(_ action: @autoclosure @escaping () -> ()) {

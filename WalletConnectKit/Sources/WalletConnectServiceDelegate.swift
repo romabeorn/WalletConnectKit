@@ -8,7 +8,7 @@
 import WalletConnectSwift
 
 /// Service delegate protocol to extend ClientDelegate protocol. Notifies delegate about "Will" actions
-protocol WalletConnectServiceDelegate: AnyObject {
+public protocol WalletConnectServiceDelegate: AnyObject {
 
     // MARK: - Connect
     

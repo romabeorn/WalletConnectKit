@@ -9,7 +9,7 @@ import WalletConnectSwift
 
 /// Kit Service to connect with the bridge via Wallect Connect 1.x.x framework
 /// To continue connection with any wallet on iOS call the deeplink of wallet app, after initiating connection to bridge
-protocol WalletConnectServiceProtocol {
+public protocol WalletConnectServiceProtocol {
 
     // MARK: - Wallet Connect
     

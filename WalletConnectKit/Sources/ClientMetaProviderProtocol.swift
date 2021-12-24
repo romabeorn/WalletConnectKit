@@ -5,8 +5,10 @@
 //  Created by Overcout on 24.12.2021.
 //
 
+import Foundation
+
 /// dApp business data provider
-protocol ClientMetaProviderProtocol {
+public protocol ClientMetaProviderProtocol {
     
     /// dApp Name
     var name: String { get }
