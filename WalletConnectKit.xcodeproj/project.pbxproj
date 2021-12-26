@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953A3FA12778D7590075380E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FA02778D7590075380E /* AppDelegate.swift */; };
+		953A3FA32778D7590075380E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FA22778D7590075380E /* SceneDelegate.swift */; };
+		953A3FA52778D7590075380E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FA42778D7590075380E /* ViewController.swift */; };
+		953A3FA82778D7590075380E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953A3FA62778D7590075380E /* Main.storyboard */; };
+		953A3FAA2778D75B0075380E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953A3FA92778D75B0075380E /* Assets.xcassets */; };
+		953A3FAD2778D75B0075380E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953A3FAB2778D75B0075380E /* LaunchScreen.storyboard */; };
+		953A3FB62778D7830075380E /* JSONRPCEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FB52778D7830075380E /* JSONRPCEndpointProtocol.swift */; };
+		953A3FB82778D79B0075380E /* MainNetInfuraIoV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FB72778D79B0075380E /* MainNetInfuraIoV3.swift */; };
+		953A3FBA2778D9E60075380E /* JSONRPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FB92778D9E60075380E /* JSONRPCService.swift */; };
+		953A3FBD2778DA130075380E /* JSONRPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FBC2778DA130075380E /* JSONRPCRequest.swift */; };
+		953A3FBF2778DAB10075380E /* JSONRPCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A3FBE2778DAB10075380E /* JSONRPCResponse.swift */; };
+		953A3FC12778E1240075380E /* WalletConnectKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C9FC0D2775A6C10085C235 /* WalletConnectKit.framework */; platformFilter = ios; };
+		953A3FC22778E1240075380E /* WalletConnectKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95C9FC0D2775A6C10085C235 /* WalletConnectKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9568A6862775F07400BACC39 /* WalletConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A67A2775F07400BACC39 /* WalletConnectService.swift */; };
 		9568A6872775F07400BACC39 /* ClientMetaProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A67B2775F07400BACC39 /* ClientMetaProviderProtocol.swift */; };
 		9568A6882775F07400BACC39 /* WalletConnectServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A67C2775F07400BACC39 /* WalletConnectServiceDelegate.swift */; };
@@ -18,12 +31,34 @@
 		9568A68F2775F07400BACC39 /* Kit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A6832775F07400BACC39 /* Kit+Extensions.swift */; };
 		9568A6902775F07400BACC39 /* BridgeProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A6842775F07400BACC39 /* BridgeProviderProtocol.swift */; };
 		9568A6912775F07400BACC39 /* WC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9568A6852775F07400BACC39 /* WC+Extensions.swift */; };
+		9587C77C2778EC78008DF5B7 /* JSONRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C77B2778EC78008DF5B7 /* JSONRPC.swift */; };
+		9587C77E27790D09008DF5B7 /* JSONRPCHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C77D27790D09008DF5B7 /* JSONRPCHandlerManager.swift */; };
+		9587C7802779111E008DF5B7 /* JSONRPCHandlerManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C77F2779111E008DF5B7 /* JSONRPCHandlerManagerProtocol.swift */; };
+		9587C78227791234008DF5B7 /* JSONRPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C78127791234008DF5B7 /* JSONRPCServiceProtocol.swift */; };
+		9587C78427791BB6008DF5B7 /* BSCDataSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C78327791BB5008DF5B7 /* BSCDataSeed.swift */; };
+		9587C78627791D07008DF5B7 /* JSONRPCIdEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C78527791D07008DF5B7 /* JSONRPCIdEnumerator.swift */; };
+		9587C78827791D0E008DF5B7 /* JSONRPCIdEnumeratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C78727791D0E008DF5B7 /* JSONRPCIdEnumeratorProtocol.swift */; };
+		9587C78C277920AA008DF5B7 /* JSONRPCEndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587C78B277920AA008DF5B7 /* JSONRPCEndpointManager.swift */; };
 		95C9FC182775A6C10085C235 /* WalletConnectKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C9FC0D2775A6C10085C235 /* WalletConnectKit.framework */; };
 		95C9FC1D2775A6C10085C235 /* WalletConnectKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C9FC1C2775A6C10085C235 /* WalletConnectKitTests.swift */; };
 		95C9FC602775C6F80085C235 /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95C9FC5F2775C6F80085C235 /* WalletConnectSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		953A3FB22778D7610075380E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C9FC042775A6C10085C235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 953A3F9D2778D7590075380E;
+			remoteInfo = WalletConnectKitPlayground;
+		};
+		953A3FC32778E1240075380E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95C9FC042775A6C10085C235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95C9FC0C2775A6C10085C235;
+			remoteInfo = WalletConnectKit;
+		};
 		95C9FC192775A6C10085C235 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95C9FC042775A6C10085C235 /* Project object */;
@@ -33,7 +68,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		953A3FC52778E1240075380E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				953A3FC22778E1240075380E /* WalletConnectKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		953A3F9E2778D7590075380E /* WalletConnectKitPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletConnectKitPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		953A3FA02778D7590075380E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		953A3FA22778D7590075380E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		953A3FA42778D7590075380E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		953A3FA72778D7590075380E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		953A3FA92778D75B0075380E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		953A3FAC2778D75B0075380E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		953A3FAE2778D75B0075380E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953A3FB52778D7830075380E /* JSONRPCEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCEndpointProtocol.swift; sourceTree = "<group>"; };
+		953A3FB72778D79B0075380E /* MainNetInfuraIoV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNetInfuraIoV3.swift; sourceTree = "<group>"; };
+		953A3FB92778D9E60075380E /* JSONRPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCService.swift; sourceTree = "<group>"; };
+		953A3FBC2778DA130075380E /* JSONRPCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCRequest.swift; sourceTree = "<group>"; };
+		953A3FBE2778DAB10075380E /* JSONRPCResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCResponse.swift; sourceTree = "<group>"; };
 		9568A67A2775F07400BACC39 /* WalletConnectService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletConnectService.swift; sourceTree = "<group>"; };
 		9568A67B2775F07400BACC39 /* ClientMetaProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientMetaProviderProtocol.swift; sourceTree = "<group>"; };
 		9568A67C2775F07400BACC39 /* WalletConnectServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletConnectServiceDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +107,14 @@
 		9568A6832775F07400BACC39 /* Kit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kit+Extensions.swift"; sourceTree = "<group>"; };
 		9568A6842775F07400BACC39 /* BridgeProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeProviderProtocol.swift; sourceTree = "<group>"; };
 		9568A6852775F07400BACC39 /* WC+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WC+Extensions.swift"; sourceTree = "<group>"; };
+		9587C77B2778EC78008DF5B7 /* JSONRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPC.swift; sourceTree = "<group>"; };
+		9587C77D27790D09008DF5B7 /* JSONRPCHandlerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCHandlerManager.swift; sourceTree = "<group>"; };
+		9587C77F2779111E008DF5B7 /* JSONRPCHandlerManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCHandlerManagerProtocol.swift; sourceTree = "<group>"; };
+		9587C78127791234008DF5B7 /* JSONRPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCServiceProtocol.swift; sourceTree = "<group>"; };
+		9587C78327791BB5008DF5B7 /* BSCDataSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCDataSeed.swift; sourceTree = "<group>"; };
+		9587C78527791D07008DF5B7 /* JSONRPCIdEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCIdEnumerator.swift; sourceTree = "<group>"; };
+		9587C78727791D0E008DF5B7 /* JSONRPCIdEnumeratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCIdEnumeratorProtocol.swift; sourceTree = "<group>"; };
+		9587C78B277920AA008DF5B7 /* JSONRPCEndpointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCEndpointManager.swift; sourceTree = "<group>"; };
 		95BBEE5C2775ED2E00ECF33F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		95C9FC0D2775A6C10085C235 /* WalletConnectKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WalletConnectKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C9FC172775A6C10085C235 /* WalletConnectKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletConnectKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +122,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		953A3F9B2778D7590075380E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953A3FC12778E1240075380E /* WalletConnectKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C9FC0A2775A6C10085C235 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,9 +149,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953A3F9F2778D7590075380E /* WalletConnectKitPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				953A3FA02778D7590075380E /* AppDelegate.swift */,
+				953A3FA22778D7590075380E /* SceneDelegate.swift */,
+				953A3FA42778D7590075380E /* ViewController.swift */,
+				953A3FA62778D7590075380E /* Main.storyboard */,
+				953A3FA92778D75B0075380E /* Assets.xcassets */,
+				953A3FAB2778D75B0075380E /* LaunchScreen.storyboard */,
+				953A3FAE2778D75B0075380E /* Info.plist */,
+			);
+			path = WalletConnectKitPlayground;
+			sourceTree = "<group>";
+		};
+		953A3FB42778D7770075380E /* RPC */ = {
+			isa = PBXGroup;
+			children = (
+				953A3FBB2778DA080075380E /* Services */,
+				953A3FB52778D7830075380E /* JSONRPCEndpointProtocol.swift */,
+				9587C78B277920AA008DF5B7 /* JSONRPCEndpointManager.swift */,
+				9587C77F2779111E008DF5B7 /* JSONRPCHandlerManagerProtocol.swift */,
+				9587C77D27790D09008DF5B7 /* JSONRPCHandlerManager.swift */,
+				9587C78127791234008DF5B7 /* JSONRPCServiceProtocol.swift */,
+				953A3FB92778D9E60075380E /* JSONRPCService.swift */,
+				953A3FBC2778DA130075380E /* JSONRPCRequest.swift */,
+				953A3FBE2778DAB10075380E /* JSONRPCResponse.swift */,
+				9587C78727791D0E008DF5B7 /* JSONRPCIdEnumeratorProtocol.swift */,
+				9587C78527791D07008DF5B7 /* JSONRPCIdEnumerator.swift */,
+				9587C77B2778EC78008DF5B7 /* JSONRPC.swift */,
+			);
+			name = RPC;
+			sourceTree = "<group>";
+		};
+		953A3FBB2778DA080075380E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				953A3FB72778D79B0075380E /* MainNetInfuraIoV3.swift */,
+				9587C78327791BB5008DF5B7 /* BSCDataSeed.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		953A3FC02778E1240075380E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9568A6792775F00D00BACC39 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				953A3FB42778D7770075380E /* RPC */,
 				9568A6982775F0B800BACC39 /* Extra */,
 				9568A6972775F0A300BACC39 /* Services */,
 				9568A6962775F09700BACC39 /* Extensions */,
@@ -135,7 +263,9 @@
 				95BBEE5C2775ED2E00ECF33F /* Package.swift */,
 				95C9FC0F2775A6C10085C235 /* WalletConnectKit */,
 				95C9FC1B2775A6C10085C235 /* WalletConnectKitTests */,
+				953A3F9F2778D7590075380E /* WalletConnectKitPlayground */,
 				95C9FC0E2775A6C10085C235 /* Products */,
+				953A3FC02778E1240075380E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +274,7 @@
 			children = (
 				95C9FC0D2775A6C10085C235 /* WalletConnectKit.framework */,
 				95C9FC172775A6C10085C235 /* WalletConnectKitTests.xctest */,
+				953A3F9E2778D7590075380E /* WalletConnectKitPlayground.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +308,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		953A3F9D2778D7590075380E /* WalletConnectKitPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 953A3FAF2778D75B0075380E /* Build configuration list for PBXNativeTarget "WalletConnectKitPlayground" */;
+			buildPhases = (
+				953A3F9A2778D7590075380E /* Sources */,
+				953A3F9B2778D7590075380E /* Frameworks */,
+				953A3F9C2778D7590075380E /* Resources */,
+				953A3FC52778E1240075380E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				953A3FC42778E1240075380E /* PBXTargetDependency */,
+			);
+			name = WalletConnectKitPlayground;
+			productName = WalletConnectKitPlayground;
+			productReference = 953A3F9E2778D7590075380E /* WalletConnectKitPlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
 		95C9FC0C2775A6C10085C235 /* WalletConnectKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95C9FC212775A6C10085C235 /* Build configuration list for PBXNativeTarget "WalletConnectKit" */;
@@ -210,6 +360,7 @@
 			);
 			dependencies = (
 				95C9FC1A2775A6C10085C235 /* PBXTargetDependency */,
+				953A3FB32778D7610075380E /* PBXTargetDependency */,
 			);
 			name = WalletConnectKitTests;
 			productName = WalletConnectKitTests;
@@ -226,12 +377,16 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					953A3F9D2778D7590075380E = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					95C9FC0C2775A6C10085C235 = {
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1300;
 					};
 					95C9FC162775A6C10085C235 = {
 						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 953A3F9D2778D7590075380E;
 					};
 				};
 			};
@@ -253,11 +408,22 @@
 			targets = (
 				95C9FC0C2775A6C10085C235 /* WalletConnectKit */,
 				95C9FC162775A6C10085C235 /* WalletConnectKitTests */,
+				953A3F9D2778D7590075380E /* WalletConnectKitPlayground */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		953A3F9C2778D7590075380E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953A3FAD2778D75B0075380E /* LaunchScreen.storyboard in Resources */,
+				953A3FAA2778D75B0075380E /* Assets.xcassets in Resources */,
+				953A3FA82778D7590075380E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C9FC0B2775A6C10085C235 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,21 +441,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		953A3F9A2778D7590075380E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953A3FA52778D7590075380E /* ViewController.swift in Sources */,
+				953A3FA12778D7590075380E /* AppDelegate.swift in Sources */,
+				953A3FA32778D7590075380E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95C9FC092775A6C10085C235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953A3FB62778D7830075380E /* JSONRPCEndpointProtocol.swift in Sources */,
+				9587C78827791D0E008DF5B7 /* JSONRPCIdEnumeratorProtocol.swift in Sources */,
 				9568A68B2775F07400BACC39 /* SessionStorageProtocol.swift in Sources */,
 				9568A68C2775F07400BACC39 /* Defaults.swift in Sources */,
 				9568A68A2775F07400BACC39 /* DAppInfoProviderProtocol.swift in Sources */,
 				9568A6902775F07400BACC39 /* BridgeProviderProtocol.swift in Sources */,
 				9568A6872775F07400BACC39 /* ClientMetaProviderProtocol.swift in Sources */,
+				953A3FBD2778DA130075380E /* JSONRPCRequest.swift in Sources */,
 				9568A68F2775F07400BACC39 /* Kit+Extensions.swift in Sources */,
+				953A3FB82778D79B0075380E /* MainNetInfuraIoV3.swift in Sources */,
+				9587C7802779111E008DF5B7 /* JSONRPCHandlerManagerProtocol.swift in Sources */,
+				9587C78627791D07008DF5B7 /* JSONRPCIdEnumerator.swift in Sources */,
 				9568A6862775F07400BACC39 /* WalletConnectService.swift in Sources */,
+				9587C77E27790D09008DF5B7 /* JSONRPCHandlerManager.swift in Sources */,
+				953A3FBA2778D9E60075380E /* JSONRPCService.swift in Sources */,
+				9587C78227791234008DF5B7 /* JSONRPCServiceProtocol.swift in Sources */,
 				9568A6882775F07400BACC39 /* WalletConnectServiceDelegate.swift in Sources */,
 				9568A68E2775F07400BACC39 /* UserDefaultsStorage.swift in Sources */,
+				9587C78C277920AA008DF5B7 /* JSONRPCEndpointManager.swift in Sources */,
 				9568A6892775F07400BACC39 /* WalletConnectServiceProtocol.swift in Sources */,
+				953A3FBF2778DAB10075380E /* JSONRPCResponse.swift in Sources */,
+				9587C77C2778EC78008DF5B7 /* JSONRPC.swift in Sources */,
 				9568A6912775F07400BACC39 /* WC+Extensions.swift in Sources */,
+				9587C78427791BB6008DF5B7 /* BSCDataSeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +493,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		953A3FB32778D7610075380E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 953A3F9D2778D7590075380E /* WalletConnectKitPlayground */;
+			targetProxy = 953A3FB22778D7610075380E /* PBXContainerItemProxy */;
+		};
+		953A3FC42778E1240075380E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 95C9FC0C2775A6C10085C235 /* WalletConnectKit */;
+			targetProxy = 953A3FC32778E1240075380E /* PBXContainerItemProxy */;
+		};
 		95C9FC1A2775A6C10085C235 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 95C9FC0C2775A6C10085C235 /* WalletConnectKit */;
@@ -311,7 +511,82 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		953A3FA62778D7590075380E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953A3FA72778D7590075380E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		953A3FAB2778D75B0075380E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				953A3FAC2778D75B0075380E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		953A3FB02778D75B0075380E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9KB8RTMTGP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WalletConnectKitPlayground/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beorn.WalletConnectKitPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		953A3FB12778D75B0075380E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9KB8RTMTGP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WalletConnectKitPlayground/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beorn.WalletConnectKitPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		95C9FC1F2775A6C10085C235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -516,6 +791,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalletConnectKitPlayground.app/WalletConnectKitPlayground";
 			};
 			name = Debug;
 		};
@@ -538,12 +814,22 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalletConnectKitPlayground.app/WalletConnectKitPlayground";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		953A3FAF2778D75B0075380E /* Build configuration list for PBXNativeTarget "WalletConnectKitPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953A3FB02778D75B0075380E /* Debug */,
+				953A3FB12778D75B0075380E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95C9FC072775A6C10085C235 /* Build configuration list for PBXProject "WalletConnectKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
